@@ -1,5 +1,7 @@
 package br.com.jbusiness.person.services;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.stereotype.Service;
@@ -19,5 +21,30 @@ public class PersonServices {
 		person.setAddress("Curitiba - PR");
 		person.setGender("Male");
 		return person;
+	}
+	
+	public Collection<Person> findAll() {
+		
+		int count = 0;
+		Person person;
+		Collection<Person> persons = new ArrayList<Person>();
+		
+		while(count < 10) {
+			
+			person = new Person();
+			person.setId(counter.incrementAndGet());
+			person.setFirstName("Name " + count);
+			person.setLastName("Last Name " + count);
+			person.setAddress("Address "  + count);
+			person.setGender("Male " + count);
+			
+			persons.add(person);
+			
+			count++;
+			
+		}
+		
+		return persons;
+		
 	}
 }

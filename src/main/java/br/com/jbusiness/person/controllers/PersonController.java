@@ -1,5 +1,7 @@
 package br.com.jbusiness.person.controllers;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +19,11 @@ public class PersonController {
 
 	@Autowired
 	private PersonServices services;
+	
+	@RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public Collection<Person> findAll() throws UnsuportedMathException {
+		return services.findAll();
+	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public Person findById(@PathVariable("id") String id) throws UnsuportedMathException {
