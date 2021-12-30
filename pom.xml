@@ -8,11 +8,11 @@
 		<version>2.6.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.jbusiness.calculator</groupId>
-	<artifactId>calculator</artifactId>
+	<groupId>br.com.jbusiness.person</groupId>
+	<artifactId>person</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Calculator</name>
-	<description>Calculator Projetct Spring Boot</description>
+	<name>Person</name>
+	<description>Person Projetct Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
