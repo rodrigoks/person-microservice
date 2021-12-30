@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.jbusiness.person.exceptions.UnsuportedMathException;
 import br.com.jbusiness.person.model.Person;
 import br.com.jbusiness.person.services.PersonServices;
 
@@ -22,27 +21,27 @@ public class PersonController {
 	private PersonServices services;
 	
 	@RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Collection<Person> findAll() throws UnsuportedMathException {
+	public Collection<Person> findAll() {
 		return services.findAll();
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Person findById(@PathVariable("id") String id) throws UnsuportedMathException {
+	public Person findById(@PathVariable("id") String id) {
 		return services.findById(id);
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public Person create(@RequestBody Person person) throws UnsuportedMathException {
+	public Person create(@RequestBody Person person) {
 		return services.create(person);
 	}
 	
 	@RequestMapping(method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public Person update(@RequestBody Person person) throws UnsuportedMathException {
+	public Person update(@RequestBody Person person) {
 		return services.update(person);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	public void delete(@PathVariable("id") String id) throws UnsuportedMathException {
+	public void delete(@PathVariable("id") String id) {
 		services.delete(id);
 	}
 	
