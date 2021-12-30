@@ -1,6 +1,6 @@
-package br.com.jbusiness.calculator.operations;
+package br.com.jbusiness.person.operations;
 
-import br.com.jbusiness.calculator.converters.NumberConverter;
+import br.com.jbusiness.person.converters.NumberConverter;
 
 public class MathOperations {
 

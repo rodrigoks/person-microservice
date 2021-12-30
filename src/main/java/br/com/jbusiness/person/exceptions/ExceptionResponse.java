@@ -1,4 +1,4 @@
-package br.com.jbusiness.calculator.exceptions;
+package br.com.jbusiness.person.exceptions;
 
 import java.io.Serializable;
 import java.util.Date;

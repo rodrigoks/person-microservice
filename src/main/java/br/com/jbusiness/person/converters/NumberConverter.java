@@ -1,4 +1,4 @@
-package br.com.jbusiness.calculator.converters;
+package br.com.jbusiness.person.converters;
 
 public class NumberConverter {
 

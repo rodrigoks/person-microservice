@@ -1,13 +1,13 @@
-package br.com.jbusiness.calculator.controllers;
+package br.com.jbusiness.person.controllers;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.jbusiness.calculator.converters.NumberConverter;
-import br.com.jbusiness.calculator.exceptions.UnsuportedMathException;
-import br.com.jbusiness.calculator.operations.MathOperations;
+import br.com.jbusiness.person.converters.NumberConverter;
+import br.com.jbusiness.person.exceptions.UnsuportedMathException;
+import br.com.jbusiness.person.operations.MathOperations;
 
 @RestController
 public class CalculatorController {
